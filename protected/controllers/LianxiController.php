@@ -1,6 +1,6 @@
 <?php
 
-class DuiwuController extends Controller
+class LianxiController extends Controller
 {	
 	public $layout='main';
 

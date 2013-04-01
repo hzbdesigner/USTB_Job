@@ -1,12 +1,10 @@
-
-<!-- 修改每个默认的catalog就行，1处 -->
-<?php 
+ <?php 
       $catalog=Catalog::model()->findByPk($catalog_id);
       $ctitle=$catalog->title;
       $curl=$this->createUrl('index',array('column_id'=>$column_id,'catalog_id'=>$catalog_id));
       $column=Column::model()->findByPk($column_id);
       $cotitle=$column->title;
-      $courl=$this->createUrl('index',array('column_id'=>$column_id,'catalog_id'=>'shizi'));//column 默认的action或者catalog
+      $courl=$this->createUrl('index',array('column_id'=>$column_id,'catalog_id'=>'shipin'));//column 默认的action或者catalog
 
 ?>
  <!-- banner --> 

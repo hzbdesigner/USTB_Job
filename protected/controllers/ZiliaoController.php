@@ -1,9 +1,7 @@
 <?php
 
-class DuiwuController extends Controller
-{	
-	public $layout='main';
-
+class ZiliaoController extends Controller
+{
 	public function actionIndex($column_id,$catalog_id)
 	{	
 		//article

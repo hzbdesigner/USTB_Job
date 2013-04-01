@@ -73,56 +73,57 @@
 		<!-- navbr -->
 		<div class="navbar">
 			<ul>
+				<!-- 每个li修改 url,参数和class的参数，三个地方 -->
 				<li>
-					<a href="<?php echo $this->createUrl('/site/index'); ?>" class="<?php if ($this->id=='index') {echo 'active';} ?>">
+					<a href="<?php echo $this->createUrl('/site/index'); ?>" class="<?php if ($this->id=='site') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_home.png" />
 					</a>
 				</li>	
 				<li class="nav_divider"></li>
 				<li>
-					<a href="<?php echo $this->createUrl('/jianshe/index', array('column_id'=>'jianshe','catalog_id'=>'fazhan')); ?>">
+					<a href="<?php echo $this->createUrl('/jianshe/index', array('column_id'=>'jianshe','catalog_id'=>'fazhan')); ?>" class="<?php if ($this->id=='jianshe') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_jianshe.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="<?php echo $this->createUrl('/duiwu/index'); ?>">
+					<a href="<?php echo $this->createUrl('/duiwu/index', array('column_id'=>'duiwu','catalog_id'=>'shizi')); ?>" class="<?php if ($this->id=='duiwu') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_shizi.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="">
+					<a href="<?php echo $this->createUrl('/dagang/index', array('column_id'=>'dagang','catalog_id'=>'dagang')); ?>" class="<?php if ($this->id=='dagang') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_dagang.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="">
+					<a href="<?php echo $this->createUrl('/jiaocai/index', array('column_id'=>'jiaocai','catalog_id'=>'jiaocai')); ?>" class="<?php if ($this->id=='jiaocai') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_jiaocai.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="">
+					<a href="<?php echo $this->createUrl('/wangluo/index', array('column_id'=>'wangluo','catalog_id'=>'shehui')); ?>" class="<?php if ($this->id=='wangluo') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_ketang.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="">
+					<a href="<?php echo $this->createUrl('/kejian/index', array('column_id'=>'kejian','catalog_id'=>'jiaoxue')); ?>" class="<?php if ($this->id=='kejian') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_kejian.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="">
+					<a href="<?php echo $this->createUrl('/ziliao/index', array('column_id'=>'ziliao','catalog_id'=>'shipin')); ?>" class="<?php if ($this->id=='ziliao') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/nav_download.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="">
+					<a href="<?php echo $this->createUrl('/lianxi/index', array('column_id'=>'lianxi','catalog_id'=>'lianxi')); ?>" class="<?php if ($this->id=='lianxi') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/nav_contact.png" />
 					</a>
 				</li>

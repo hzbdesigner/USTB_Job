@@ -65,7 +65,7 @@ html,body{background-color:#fff;height:100%;width:100%;.pr;z-index: 0;}
 		li{.fl;
 			a{.disblock;height:40px;.pl24;.pr24;line-height: 40px;
 				&:hover{.bgred;}
-				&.active{.bgred;}
+				&.active{.bgblue;}
 			}
 		}
 		.nav_divider{background: url("@{baseurl}nav_divider.png") no-repeat;width:2px;height:40px;}
@@ -264,13 +264,14 @@ html,body{background-color:#fff;height:100%;width:100%;.pr;z-index: 0;}
 	}
 	.subcontent{.mt10;
 		.left{background-color: #ddd;border-radius: 4px;height:500px;
-			ul{width: 100%;.pt10;}
+			ul{width: 100%;}
+			.column{border-top-left-radius: 4px;border-top-right-radius: 4px;background-color: @blue;.tc;color: #fff;border-bottom: 4px solid #999;}
 			li{height: 32px;line-height: 32px;display: block;
 				a{display: block;width: 100%;.tc;
-					&:hover{background-color: @blue;color: #fff;}
+					&:hover{background-color: @red;color: #fff;}
 				}
 				&.selected{
-					a{background-color: @blue;color: #fff;}
+					a{background-color: @red;color: #fff;}
 				}
 			}
 		}
