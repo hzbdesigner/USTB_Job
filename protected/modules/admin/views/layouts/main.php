@@ -4,7 +4,7 @@
 
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>科普网站—后台管理</title> 
+	<title>USTB就业指导-后台</title> 
 	<meta name="description" content="admin Bootstrap Theme"/>
 	<meta name="keywords" content="admin, Theme, web, html5, css3, Bootstrap" />
 	<meta name="author" content="hzbdesigner"/>

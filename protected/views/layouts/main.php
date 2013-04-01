@@ -10,8 +10,7 @@
 
 	<!-- Le styles -->
 
-	<link href="<?php echo Yii::app()->
-	request->baseUrl; ?>/assets-frontend/tool/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<!--responsive.css -->
 	<!-- <link href="<?php echo Yii::app()->
 	request->baseUrl; ?>/assets-frontend/css/bootstrap-responsive.css" rel="stylesheet"> -->
@@ -46,9 +45,9 @@
 		<div class="row ">
 			<div class="span8">
 				<span class="span1">
-					<img src="assets-frontend/img/logo_pic.png"></span>
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/logo_pic.png"></span>
 				<span class="span5 mt10">
-					<img src="assets-frontend/img/logo_title.png">
+					<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/logo_title.png">
 					<div class="link mt10">
 						<a href="#">学校首页</a>
 						&nbsp;|&nbsp;
@@ -75,56 +74,56 @@
 		<div class="navbar">
 			<ul>
 				<li>
-					<a href="">
-						<img src="assets-frontend/img/name_home.png" />
+					<a href="<?php echo $this->createUrl('/site/index'); ?>" class="<?php if ($this->id=='index') {echo 'active';} ?>">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_home.png" />
+					</a>
+				</li>	
+				<li class="nav_divider"></li>
+				<li>
+					<a href="<?php echo $this->createUrl('/jianshe/index', array('column_id'=>'jianshe','catalog_id'=>'fazhan')); ?>">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_jianshe.png" />
+					</a>
+				</li>
+				<li class="nav_divider"></li>
+				<li>
+					<a href="<?php echo $this->createUrl('/duiwu/index'); ?>">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_shizi.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
 					<a href="">
-						<img src="assets-frontend/img/name_jianshe.png" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_dagang.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
 					<a href="">
-						<img src="assets-frontend/img/name_shizi.png" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_jiaocai.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
 					<a href="">
-						<img src="assets-frontend/img/name_dagang.png" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_ketang.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
 					<a href="">
-						<img src="assets-frontend/img/name_jiaocai.png" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_kejian.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
 					<a href="">
-						<img src="assets-frontend/img/name_ketang.png" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/nav_download.png" />
 					</a>
 				</li>
 				<li class="nav_divider"></li>
 				<li>
 					<a href="">
-						<img src="assets-frontend/img/name_kejian.png" />
-					</a>
-				</li>
-				<li class="nav_divider"></li>
-				<li>
-					<a href="">
-						<img src="assets-frontend/img/nav_download.png" />
-					</a>
-				</li>
-				<li class="nav_divider"></li>
-				<li>
-					<a href="">
-						<img src="assets-frontend/img/nav_contact.png" />
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/nav_contact.png" />
 					</a>
 				</li>
 			</ul>
@@ -176,13 +175,13 @@
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<!-- less js -->
-	<script language="javascript" src="assets-frontend/tool/less/less.js"></script>
+	<script language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/less/less.js"></script>
 	<!-- jquery js -->
-	<script src="assets-frontend/tool/jquery/jquery.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/jquery/jquery.js"></script>
 	<!--bootstrap js -->
-	<script src="assets-frontend/tool/bootstrap/js/bootstrap.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/bootstrap/js/bootstrap.js"></script>
 	<!-- app js -->
-	<script src="assets-frontend/js/app.js"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/js/app.js"></script>
 
 </body>
 </html>
