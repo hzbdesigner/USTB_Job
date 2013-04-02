@@ -2,12 +2,12 @@
 		<div class="slider">
 			<div id="myCarousel" class="carousel slide">
 				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class=""></li>
-					<li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1" class=""></li>
 					<li data-target="#myCarousel" data-slide-to="2" class=""></li>
 				</ol>
 				<div class="carousel-inner">
-					<div class="item">
+					<div class="active item">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide1.png" alt="placeholder+image">
 						<div class="carousel-caption">
 							<h4>认识职业与环境</h4>
