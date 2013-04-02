@@ -11,6 +11,9 @@
 	<!-- Le styles -->
 
 	<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/bootstrap/css/bootstrap-grid.css" rel="stylesheet">
+	<!-- <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/bootstrap/css/bootstrap-carousel.css" rel="stylesheet"> -->
+	<!-- <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/bootstrap/css/bootstrap-form.css" rel="stylesheet"> -->
 	<!--responsive.css -->
 	<!-- <link href="<?php echo Yii::app()->
 	request->baseUrl; ?>/assets-frontend/css/bootstrap-responsive.css" rel="stylesheet"> -->
