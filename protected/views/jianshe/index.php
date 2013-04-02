@@ -34,6 +34,7 @@ EOD;
    <div class="right span10">
      <ul class="breadcrumb">
       <?php 
+      
       echo
         <<<EOD
 
@@ -49,9 +50,12 @@ EOD;
           <a href="$curl">$ctitle</a>
           <span class="divider">/</span>
         </li>
-        <li class="active">内容</li>
 EOD;
-
+    if ($this->action->id==view) {
+       echo '<li class="active">内容</li>';
+      } else {
+       echo '';
+      }
     ?>
      </ul>
       

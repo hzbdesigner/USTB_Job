@@ -1,1 +1,6 @@
-联系我们内容，需文档
+<?php 
+	foreach ($models as $model) {
+		echo $model->content;
+	}
+
+?>

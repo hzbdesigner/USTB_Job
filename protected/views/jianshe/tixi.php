@@ -1,3 +1,6 @@
+<?php 
+	foreach ($models as $model) {
+		echo $model->content;
+	}
 
-课程体系内容，需要文档~~
-课程体系内容，需要文档~~
+?>

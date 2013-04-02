@@ -49,7 +49,6 @@ EOD;
           <a href="$curl">$ctitle</a>
           <span class="divider">/</span>
         </li>
-        <li class="active">内容</li>
 EOD;
 
     ?>
