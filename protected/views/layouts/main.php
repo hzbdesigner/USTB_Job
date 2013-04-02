@@ -58,7 +58,7 @@
 					</div>
 				</span>
 			</div>
-			<div class="span4 link mt20">
+			<div class="span3 link mt25 ml45">
 				<a href="#">登录</a>
 				&nbsp;|&nbsp;
 				<a href="#">加入收藏</a>
@@ -141,22 +141,22 @@
 					<a href="#">北京科技大学</a>
 				</li>
 				<li>
-					<a href="#">北京科技大学</a>
+					<a href="#">本科教学网</a>
 				</li>
 				<li>
 					<a href="#">北京科技大学</a>
 				</li>
 				<li>
-					<a href="#">北京科技大学</a>
+					<a href="#">招生就业处</a>
+				</li>
+				<li>
+					<a href="#">本科教学网</a>
 				</li>
 				<li>
 					<a href="#">北京科技大学</a>
 				</li>
 				<li>
-					<a href="#">北京科技大学</a>
-				</li>
-				<li>
-					<a href="#">北京科技大学</a>
+					<a href="#">招生就业处</a>
 				</li>
 				<li>
 					<a href="#">北京科技大学</a>
@@ -164,12 +164,12 @@
 			</ul>
 		</div>
 		<div class="copyright">
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+			<p>北京科技大学就业信息网 
 			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+地址：中国.北京海淀区学院路30号 100083    邮箱：jyzx@ustb.edu.cn      
 			</p>
 			<p>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet,
+Copyright © 2009 - 2010 北京科技大学就业指导中心   中华人民共和国电信与信息服务业务经营许可证编号：京ICP证010391号</p>
 			</p>
 		</div>
 

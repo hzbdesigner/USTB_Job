@@ -8,32 +8,32 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="item">
-						<img src="http://dummyimage.com/940x274/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide1.png" alt="placeholder+image">
 						<div class="carousel-caption">
-							<h4>First Thumbnail label</h4>
+							<h4>认识职业与环境</h4>
 							<div class="des">主讲人：王老师</div>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-							</p>
-						</div>
-					</div>
-					<div class="item active">
-						<img src="http://dummyimage.com/940x274/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-						<div class="carousel-caption">
-							<h4>Second Thumbnail label</h4>
-							<div class="des">主讲人：王老师</div>
-							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境							
 							</p>
 						</div>
 					</div>
 					<div class="item">
-						<img src="http://dummyimage.com/940x274/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide2.png" alt="placeholder+image">
 						<div class="carousel-caption">
-							<h4>Third Thumbnail label</h4>
+							<h4>认识职业与环境</h4>
 							<div class="des">主讲人：王老师</div>
 							<p>
-								Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境							
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide1.png" alt="placeholder+image">
+						<div class="carousel-caption">
+							<h4>认识职业与环境</h4>
+							<div class="des">主讲人：王老师</div>
+							<p>
+							认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境							
 							</p>
 						</div>
 					</div>
@@ -47,7 +47,7 @@
 		<div class="row content">
 			<div class="span9 left">
 				<ul class="nav">
-					<li>
+					<li class="active">
 						<a href="#">最新资讯</a>
 					</li>
 					<li>
