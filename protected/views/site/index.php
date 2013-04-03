@@ -44,118 +44,174 @@
 
 		</div>
 		<!-- navbr end -->
-		<div class="row content">
+		<div class="row-fluid content">
 			<div class="span9 left">
-				<ul class="nav-job">
-					<li class="active">
-						<a data-toggle="tab" data-target="#tab1">最新资讯</a>
+				<ul class="nav-job row-fluid">
+					<li class="active span4">
+						<a data-toggle="tab" data-target="#tab1">最新教材</a>
 					</li>
-					<li>
-						<a data-toggle="tab" data-target="#tab2">最新资料</a>
+					<li class="span4">
+						<a data-toggle="tab" data-target="#tab2">最新视频</a>
 					</li>
-					<li>
-						<a data-toggle="tab" data-target="#tab3">最新视频</a>
+					<li class="span4">
+						<a data-toggle="tab" data-target="#tab3">最新下载</a>
 					</li>
 				</ul>
-				<div class="tab-content-job active" id="tab1">
-					<ul>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-					</ul>
+				<div class="tab-content-job active row-fluid jiaocailists" id="tab1">
+					<div class="span3">
+						<div class="thumbnail">
+							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							<div class="title">教材标题</div>
+							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
+							<a href="#" class="btn btn-small">详细内容</a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="thumbnail">
+							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							<div class="title">教材标题</div>
+							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
+							<a href="#" class="btn btn-small">详细内容</a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="thumbnail">
+							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							<div class="title">教材标题</div>
+							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
+							<a href="#" class="btn btn-small">详细内容</a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="thumbnail">
+							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							<div class="title">教材标题</div>
+							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
+							<a href="#" class="btn btn-small">详细内容</a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="thumbnail">
+							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							<div class="title">教材标题</div>
+							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
+							<a href="#" class="btn btn-small">详细内容</a>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="thumbnail">
+							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							<div class="title">教材标题</div>
+							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
+							<a href="#" class="btn btn-small">详细内容</a>
+						</div>
+					</div>
+
 				</div>
-				<div class="tab-content-job" id="tab2">
-					<ul>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
+				<div class="tab-content-job row-fluid wangluolists" id="tab2">
+					<div class="span6">
+						<div class="row-fluid">
+							<div class="thumbnail span5 ">
+							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
 							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
+							<div class="span7 content">
+								<div class="title"><a href="#">视频标题视频标题</a></div>
+								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
+								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
 							</div>
-						</li>
-					</ul>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="row-fluid">
+							<div class="thumbnail span5 ">
+							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
+							</div>
+							<div class="span7 content">
+								<div class="title"><a href="#">视频标题视频标题</a></div>
+								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
+								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="row-fluid">
+							<div class="thumbnail span5 ">
+							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
+							</div>
+							<div class="span7 content">
+								<div class="title"><a href="#">视频标题视频标题</a></div>
+								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
+								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="row-fluid">
+							<div class="thumbnail span5 ">
+							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
+							</div>
+							<div class="span7 content">
+								<div class="title"><a href="#">视频标题视频标题</a></div>
+								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
+								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="tab-content-job" id="tab3">
-					<ul>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-						<li class="">
-							<div class="img">
-								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-								<p class="title">
-									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
-								</p>
-							</div>
-						</li>
-					</ul>
+					<table class="table table-striped ziliaolists">
+						<thead>
+							<tr>
+								<th>发布者</th>
+								<th>资料名称</th>
+								<th>发布时间</th>
+								<th>下载次数</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>团委</td>
+								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
+								<td>2013-04-01</td>
+								<td>下载（10）</td>
+							</tr>
+							<tr>
+								<td>团委</td>
+								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
+								<td>2013-04-01</td>
+								<td>下载（10）</td>
+							</tr>
+							<tr>
+								<td>团委</td>
+								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
+								<td>2013-04-01</td>
+								<td>下载（10）</td>
+							</tr>
+							<tr>
+								<td>团委</td>
+								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
+								<td>2013-04-01</td>
+								<td>下载（10）</td>
+							</tr>
+							<tr>
+								<td>团委</td>
+								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
+								<td>2013-04-01</td>
+								<td>下载（10）</td>
+							</tr>
+							<tr>
+								<td>团委</td>
+								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
+								<td>2013-04-01</td>
+								<td>下载（10）</td>
+							</tr>
+
+						</tbody>
+					</table>
 				</div>
 			</div>
 			<div class="span3 right">
@@ -172,8 +228,4 @@
 				</ul>
 			</div>
 		</div>
-		<script>
-		 $(function () {
-		    $('a[data-toggle="tab"]').tab();
-		  })
-		</script>
+
