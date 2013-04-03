@@ -110,7 +110,7 @@
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="<?php echo $this->createUrl('/wangluo/index', array('column_id'=>'wangluo','catalog_id'=>'shehui')); ?>" class="<?php if ($this->id=='wangluo') {echo 'active';} ?>">
+					<a href="<?php echo $this->createUrl('/wangluo/index', array('column_id'=>'wangluo','catalog_id'=>'xiaoyuan')); ?>" class="<?php if ($this->id=='wangluo') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/name_ketang.png" />
 					</a>
 				</li>

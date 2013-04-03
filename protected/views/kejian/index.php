@@ -4,7 +4,7 @@
       $curl=$this->createUrl('index',array('column_id'=>$column_id,'catalog_id'=>$catalog_id));
       $column=Column::model()->findByPk($column_id);
       $cotitle=$column->title;
-      $courl=$this->createUrl('index',array('column_id'=>$column_id,'catalog_id'=>'fazhan'));//column 默认的action或者catalog
+      $courl=$this->createUrl('index',array('column_id'=>$column_id,'catalog_id'=>'jiaoxue'));//column 默认的action或者catalog
 
 ?>
  <!-- banner --> 
@@ -49,7 +49,7 @@ EOD;
           <a href="$curl">$ctitle</a>
           <span class="divider">/</span>
         </li>
-        <li class="active">内容</li>
+       
 EOD;
 
     ?>
