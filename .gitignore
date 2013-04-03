@@ -10,3 +10,5 @@ assets_admin/.DS_Store
 upload/.DS_Store
 
 upload/.DS_Store
+
+protected/config/main.php
