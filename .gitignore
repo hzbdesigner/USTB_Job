@@ -1,2 +1,12 @@
 
 protected/runtime/application.log
+
+.DS_Store
+
+assets-frontend/.DS_Store
+
+assets_admin/.DS_Store
+
+upload/.DS_Store
+
+upload/.DS_Store
