@@ -94,10 +94,16 @@ class ArticleController extends Controller
 						
 			$model=new Article;
 			$model->attributes=$_POST['Article'];
-			$content=$_POST['Article']['content'];
-			$des=$_POST['Article']['des'];
-			$model->content=$content;
-			$model->des=$des;
+			if ($_POST['Article']['content']) {
+				$content=$_POST['Article']['content'];
+				$model->content=$content;
+			}
+			if ($des=$_POST['Article']['des']) {
+				$des=$_POST['Article']['des'];
+				$model->des=$des;
+			}
+			
+			
 
 			if($model->save()){
 				$this->redirect(array('/admin/article/admin','column_id'=>$column_id,'catalog_id'=>"all"));
@@ -177,10 +183,14 @@ class ArticleController extends Controller
 			}
 
 			$model->attributes=$_POST['Article'];
-			$content=$_POST['Article']['content'];
-			$des=$_POST['Article']['des'];
-			$model->content=$content;
-			$model->des=$des;
+				if ($_POST['Article']['content']) {
+				$content=$_POST['Article']['content'];
+				$model->content=$content;
+			}
+			if ($des=$_POST['Article']['des']) {
+				$des=$_POST['Article']['des'];
+				$model->des=$des;
+			}
 			if($model->save()){
 				$this->redirect(array('/admin/article/admin','column_id'=>$column_id,'catalog_id'=>"all"));
 				//尼玛，redirect和createUrl不一样
