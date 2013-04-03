@@ -46,18 +46,18 @@
 		<!-- navbr end -->
 		<div class="row content">
 			<div class="span9 left">
-				<ul class="nav">
+				<ul class="nav-job">
 					<li class="active">
-						<a href="#">最新资讯</a>
+						<a data-toggle="tab" data-target="#tab1">最新资讯</a>
 					</li>
 					<li>
-						<a href="#">最新资料</a>
+						<a data-toggle="tab" data-target="#tab2">最新资料</a>
 					</li>
 					<li>
-						<a href="#">最新视频</a>
+						<a data-toggle="tab" data-target="#tab3">最新视频</a>
 					</li>
 				</ul>
-				<div class="tab-content">
+				<div class="tab-content-job active" id="tab1">
 					<ul>
 						<li class="">
 							<div class="img">
@@ -109,6 +109,54 @@
 						</li>
 					</ul>
 				</div>
+				<div class="tab-content-job" id="tab2">
+					<ul>
+						<li class="">
+							<div class="img">
+								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+								<p class="title">
+									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+								</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+								<p class="title">
+									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-content-job" id="tab3">
+					<ul>
+						<li class="">
+							<div class="img">
+								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+								<p class="title">
+									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+								</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+								<p class="title">
+									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+								</p>
+							</div>
+						</li>
+						<li class="">
+							<div class="img">
+								<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
+								<p class="title">
+									<a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</a>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="span3 right">
 				<div class="title">师资队伍</div>
@@ -124,3 +172,8 @@
 				</ul>
 			</div>
 		</div>
+		<script>
+		 $(function () {
+		    $('a[data-toggle="tab"]').tab();
+		  })
+		</script>
