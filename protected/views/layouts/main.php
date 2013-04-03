@@ -20,8 +20,10 @@
 	<!-- <link href="<?php echo Yii::app()->
 	request->baseUrl; ?>/assets-frontend/css/bootstrap-responsive.css" rel="stylesheet"> -->
 	<!-- less.css -->
-	<link href="<?php echo Yii::app()->
-	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.less" rel="stylesheet/less" type="text/css">
+	<link rel="stylesheet" href="<?php echo Yii::app()->
+	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.css">
+	<!-- <link href="<?php echo Yii::app()->
+	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.less" rel="stylesheet/less" type="text/css"> -->
 	<!-- app.css -->
 	<!-- <link href="<?php echo Yii::app()->
 	request->baseUrl; ?>/assets-frontend/css/app.css" rel="stylesheet"> -->
@@ -180,8 +182,9 @@ Copyright © 2009 - 2010 北京科技大学就业指导中心   中华人民共�
 	<!-- Le javascript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<!-- less js -->
-	<script language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/less/less.js"></script>
+	<!-- less js
+	<script language="javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/less/less.js"></script> 
+	-->
 	<!-- jquery js -->
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/tool/jquery/jquery.js"></script>
 
