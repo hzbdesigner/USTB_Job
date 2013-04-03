@@ -15,7 +15,7 @@
 					<a href="$url" class="btn btn-small">详细内容</a>
 				</div>
 			</div>
-			job
+			
 
 EOD;
 		}

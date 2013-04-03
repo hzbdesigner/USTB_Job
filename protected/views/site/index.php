@@ -45,7 +45,7 @@
 		</div>
 		<!-- navbr end -->
 		<div class="row-fluid content">
-			<div class="span9 left">
+			<div class="span10 left">
 				<ul class="nav-job row-fluid">
 					<li class="active span4">
 						<a data-toggle="tab" data-target="#tab1">最新教材</a>
@@ -214,18 +214,22 @@
 					</table>
 				</div>
 			</div>
-			<div class="span3 right">
+			<div class="span2 right">
 				<div class="title">师资队伍</div>
-				<ul class="laoshi">
-					<li>
-						<img src="http://dummyimage.com/400x400/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-						<a href="#">教师名</a>
-					</li>
-					<li>
-						<img src="http://dummyimage.com/400x400/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-						<a href="">教师名</a>
-					</li>
-				</ul>
+				<div class="row-fluid duiwulists">
+					<div class="span10">
+						<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
+						<div class="des">
+							<h1 class=""><a href="#">老师名字</a></h1>
+						</div>
+					</div>
+					<div class="span10">
+						<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
+						<div class="des">
+							<h1 class=""><a href="#">老师名字</a></h1>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 

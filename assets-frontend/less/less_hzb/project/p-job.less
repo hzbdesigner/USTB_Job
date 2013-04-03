@@ -237,9 +237,10 @@ html,body{background-color:#fff;height:100%;width:100%;.pr;z-index: 0;background
 		}
 	}
 	.content{.mt15;
-		.left{
+		.left{width: 750px !important;
 			.nav-job{.clearfix;margin-bottom: 10px;
-				li{background-color: #ddd;border-top: 4px solid #ddd;
+				li{background-color: #ddd;border-top: 4px solid #ddd;width:32.5%;margin-left:1.25%;
+					&:first-child{margin-left: 0% ;}
 					a{height:50px;display: block;.tc;line-height: 50px;.fs16;width: 100%;}
 					&:hover{background-color: #eee;border-top: 4px solid @blue;color: @red;}
 					&.active{background-color: #eee;border-top: 4px solid @blue;color: @red;}
@@ -291,12 +292,15 @@ html,body{background-color:#fff;height:100%;width:100%;.pr;z-index: 0;background
 
 			}
 		}
-		.right{background-color: #eee;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;
+		.right{background-color: #eee;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;width:170px !important;margin-left: 20px !important;
 			.title{height: 50px;.bgblue;color:#fff;border-bottom: 4px solid @red;.fs16;.tc;line-height: 50px;border-top-left-radius: 6px;border-top-right-radius: 6px;}
-			ul{width: auto;padding:20px 30px;}
-			li{.mb10;
-				img{width:160px;height:160px;}
-				a{display: block;.tc;}
+			//duiwu
+			.duiwulists{.tc;margin: 0 auto;padding-top:15px;
+				.span10{margin: 0 auto;float: none;margin-bottom:10px; }
+				.thumbnail{}
+				img{width:auto;height: 150px;}
+				.des{height: 20px;}
+				h1{font-size: 14px;.tc;line-height: 18px !important;height: 18px !important;.mt5;}
 			}
 		}
 	}
