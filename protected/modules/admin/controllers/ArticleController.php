@@ -70,8 +70,8 @@ class ArticleController extends Controller
 			//图片验证
 			if (!empty($_FILES)){ 
 				//尼玛，只要有这个控件，就能进来
+				//图片上传
 				$fileTypes = array('jpg','jpeg','gif','png'); // File extensions
-				
 				if(!empty($_FILES['despic']['name'])){
 					
 					$ext = pathinfo($_FILES['despic']['name'],PATHINFO_EXTENSION);
@@ -87,6 +87,25 @@ class ArticleController extends Controller
 				}else{
 					$msg="请上传图片1"; //如果图片名为空的话
 				}
+
+				//视频或者其他文件上传
+				// $fileTypes = array('jpg','jpeg','gif','png'); // File extensions
+				// if(!empty($_FILES['despic']['name'])){
+					
+				// 	$ext = pathinfo($_FILES['despic']['name'],PATHINFO_EXTENSION);
+				// 	if ( in_array( $ext ,$fileTypes ) ){   
+				// 		$file_name = 'despic_'.time().rand(0,999).'.'.$ext;
+				// 		$despic_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name;//设置存储路径（包括自己的名字）
+				// 		move_uploaded_file( $_FILES['despic']['tmp_name'] , $despic_file_path);  //拷贝副本，将副本文件存储到新的位置。
+						
+				// 		$_POST['Article']['despic'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name;
+				// 	}else{
+				// 		$msg = '请上传 png/jpg/gif 格式的图片';//如果上传的文件格式不对的话
+				// 	}
+				// }else{
+				// 	$msg="请上传图片1"; //如果图片名为空的话
+				// }
+
 			}else{
 				$msg = '请上传图片'; //如果$_file为空的话
 			}

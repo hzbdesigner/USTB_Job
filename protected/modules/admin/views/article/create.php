@@ -100,7 +100,19 @@ EOD;
 			</div>
 EOD;
 
-			} ?>			
+			} ?>		
+			<!-- file -->
+			<?php if($template['iffile']){
+// 			echo <<<EOD
+// 			<div class="control-group">
+// 				<label class="control-label">文件上传</label>
+// 				<div class="controls">
+// 					<input type="file"  name="banner"/>
+// 				</div>
+// 			</div>
+// EOD;
+
+			} ?>		
 			<!-- author -->
 			<?php if($template['ifauthor']){
 			echo <<<EOD
