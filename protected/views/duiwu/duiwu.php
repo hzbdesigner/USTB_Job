@@ -18,7 +18,7 @@
 EOD;
 		}
 	?>
-	<div class="span3">
+	<!-- <div class="span3">
 		<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
 		<div class="des">
 			<h1 class="title"><a href="#">老师名字</a></h1>
@@ -35,36 +35,20 @@ EOD;
 		<div class="des">
 			<h1 class="title"><a href="#">老师名字</a></h1>
 		</div>
-	</div>
-	<div class="span3">
-		<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
-		<div class="des">
-			<h1 class="title"><a href="#">老师名字</a></h1>
-		</div>
-	</div>
-	<div class="span3">
-		<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
-		<div class="des">
-			<h1 class="title"><a href="#">老师名字</a></h1>
-		</div>
-	</div>
-	<div class="span3">
-		<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
-		<div class="des">
-			<h1 class="title"><a href="#">老师名字</a></h1>
-		</div>
-	</div>
-	<div class="span3">
-		<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
-		<div class="des">
-			<h1 class="title"><a href="#">老师名字</a></h1>
-		</div>
-	</div>
-	<div class="span3">
-		<div class="thumbnail"><a href="#"><img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></a></div>
-		<div class="des">
-			<h1 class="title"><a href="#">老师名字</a></h1>
-		</div>
-	</div>
+	</div> -->
+
+<div class="span12" style="text-align:left;margin-left:0px;">
+	<?php  $this->widget('CLinkPager',array(
+		'pages'=>$pages,
+		'firstPageLabel' => '首页',
+		'lastPageLabel' => '末页',
+		'nextPageLabel' => '下一页',
+		'prevPageLabel' => '上一页',
+		'header' => '',
+		'footer' => '',
+		)); 
+	?>
+</div>
+	
 
 </div>

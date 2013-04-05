@@ -127,5 +127,17 @@ EOD;
 			</div>
 		</div>
 	</div>
+	<div class="span12" style="text-align:left;margin-left:0px;">
+	<?php  $this->widget('CLinkPager',array(
+		'pages'=>$pages,
+		'firstPageLabel' => '首页',
+		'lastPageLabel' => '末页',
+		'nextPageLabel' => '下一页',
+		'prevPageLabel' => '上一页',
+		'header' => '',
+		'footer' => '',
+		)); 
+	?>
+</div>
 
 </div>
