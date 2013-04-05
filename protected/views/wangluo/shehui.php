@@ -4,17 +4,19 @@
 foreach ($models as $model) {
 	$title=$model->title;
 	$despic=$model->despic;
+	$des=$model->des;
 	$article_id=$model->article_id;
 	$read_num=$model->read_num;
-	$date=$model->date;
+	$date=substr($model->date, 0, 10);
 	$url=$this->createUrl('view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
+	$videoicon=Yii::app()->request->baseUrl.'/assets-frontend/img/icon-video.png';
 	echo <<<EOD
 	<div class="span6">
 
 		<div class="row-fluid">
 			<div class="thumbnail span5 ">
 			 <img src="$despic" alt="$title">
-			 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
+			 <i class=""><img src='$videoicon'></i>
 			</div>
 			<div class="span7 content">
 				<div class="title"><a href="$url">$title</a></div>
