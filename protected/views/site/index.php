@@ -20,13 +20,14 @@
 						$despic=$model->despic;
 						$des=$model->des;
 						$article_id=$model->article_id;
+						$author=$model->author;
 						//$url=$this->createUrl('/duiwu/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
 						echo <<<EOD
 						<div class=" item">
 						<img src="$despic" alt="$title">
 						<div class="carousel-caption">
 							<h4>$title</h4>
-							<div class="des">主讲人：王老师</div>
+							<div class="des"> <span>主讲人:</span> $author</div>
 							<p>
 							$des						
 							</p>
@@ -67,7 +68,7 @@ EOD;
 			<div class="span10 left">
 				<ul class="nav-job row-fluid">
 					<li class="active span4">
-						<a data-toggle="tab" data-target="#tab1">最新教材</a>
+						<a data-toggle="tab" data-target="#tab1">最新课件</a>
 					</li>
 					<li class="span4">
 						<a data-toggle="tab" data-target="#tab2">最新视频</a>
@@ -83,7 +84,7 @@ EOD;
 					$criteria= new CDbCriteria;
 					$criteria->limit=8;
 					$criteria->order="article_id DESC";
-					$column_id='jiaocai';
+					$column_id='kejian';
 					$criteria->addCondition("column_id='$column_id'");
 					$models=Article::Model()->findAll($criteria); 
 					foreach ($models as $model) {

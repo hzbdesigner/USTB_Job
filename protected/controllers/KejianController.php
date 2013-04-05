@@ -41,9 +41,22 @@ class KejianController extends Controller
 	// 	$this->render('view',array('model'=>$model,'column_id'=>$column_id,'catalog_id'=>$catalog_id));
 
 	// }
-	public function actionView()
-	{
-		$this->render('view');
+		public function actionView($column_id,$catalog_id,$article_id)
+	{	
+		//article		
+		$model=Article::model()->findByPk($article_id);
+		// $model->read_num += 1;
+		// $model->save();
+		
+		//column&catalog
+		$column=Column::model()->findByPk($column_id);
+		$criteria_ca = new CDbCriteria;
+		$criteria_ca->order='order_id ASC';
+		$criteria_ca->addCondition("column_id='$column_id'");
+		$catalogs=Catalog::model()->findAll($criteria_ca);
+
+		$sub_content = $this->renderPartial('view' ,array('model'=>$model),true);
+	    $this->render('index',array('sub_content' =>$sub_content,'catalogs'=>$catalogs,'catalog_id'=>$catalog_id,'column_id'=>$column_id));
 	}
 	
 

@@ -59,6 +59,7 @@ EOD;
        <?php echo $ctitle; ?>
        <a href="#" class="more">more</a>
      </div>
-     <?php echo $sub_content; ?>
+          <div style="padding-left:30px;padding-right:30px;font-weight:normal;"> <?php echo $sub_content; ?></div>
+
    </div>
  </div>

@@ -105,9 +105,9 @@ EOD;
 			<?php if($template['ifauthor']){
 			echo <<<EOD
 			<div class="control-group">
-				<label class="control-label">发布部门</label>
+				<label class="control-label">作者</label>
 				<div class="controls">
-					<input class="span2" type="text" name='Article[author]' placeholder="输入发布部门"/>
+					<input class="span2" type="text" name='Article[author]' placeholder="输入作者"/>
 				</div>
 			</div>
 EOD;
