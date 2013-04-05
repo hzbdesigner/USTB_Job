@@ -8,6 +8,25 @@
 		</tr>
 	</thead>
 	<tbody>
+		<?php 
+		foreach ($models as $model) {
+			$title=$model->title;
+			$article_id=$model->article_id;
+			$author=$model->author;
+			$read_num=$model->read_num;
+			$date=substr($model->date, 0, 10);
+			$url=$this->createUrl('view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
+			echo <<<EOD
+			<tr>
+				<td>$author</td>
+				<td><a href="$url">$title</a></td>
+				<td>$date</td>
+				<td>下载（<span>$read_num</span>）</td>
+			</tr>
+
+EOD;
+		}
+	?>
 		<tr>
 			<td>团委</td>
 			<td><a href="#">视频资料名称视频资料名称视频资料名称</a></td>
@@ -47,3 +66,15 @@
 
 	</tbody>
 </table>
+<div class="span12" style="text-align:left;margin-left:0px;">
+<?php  $this->widget('CLinkPager',array(
+	'pages'=>$pages,
+	'firstPageLabel' => '首页',
+	'lastPageLabel' => '末页',
+	'nextPageLabel' => '下一页',
+	'prevPageLabel' => '上一页',
+	'header' => '',
+	'footer' => '',
+	)); 
+?>
+</div>
