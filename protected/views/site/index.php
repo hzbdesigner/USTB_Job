@@ -1,13 +1,42 @@
 		<!-- slider -->
 		<div class="slider">
 			<div id="myCarousel" class="carousel slide">
-				<ol class="carousel-indicators">
+				<!-- <ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 					<li data-target="#myCarousel" data-slide-to="1" class=""></li>
 					<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-				</ol>
+				</ol> -->
 				<div class="carousel-inner">
-					<div class="active item">
+					<?php 
+					$criteria= new CDbCriteria;
+					//$criteria->limit=2;
+					$criteria->order="article_id DESC";
+					$column_id='index';
+					$catalog_id='banner';
+					$criteria->addCondition("column_id='$column_id'","catalog_id='$catalog_id'");
+					$models=Article::Model()->findAll($criteria); 
+					foreach ($models as $model) {
+						$title=$model->title;
+						$despic=$model->despic;
+						$des=$model->des;
+						$article_id=$model->article_id;
+						//$url=$this->createUrl('/duiwu/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
+						echo <<<EOD
+						<div class=" item">
+						<img src="$despic" alt="$title">
+						<div class="carousel-caption">
+							<h4>$title</h4>
+							<div class="des">主讲人：王老师</div>
+							<p>
+							$des						
+							</p>
+						</div>
+					</div>
+
+EOD;
+						}
+					?>
+					<div class=" active item">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide1.png" alt="placeholder+image">
 						<div class="carousel-caption">
 							<h4>认识职业与环境</h4>
@@ -19,16 +48,6 @@
 					</div>
 					<div class="item">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide2.png" alt="placeholder+image">
-						<div class="carousel-caption">
-							<h4>认识职业与环境</h4>
-							<div class="des">主讲人：王老师</div>
-							<p>
-							认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境							
-							</p>
-						</div>
-					</div>
-					<div class="item">
-						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide1.png" alt="placeholder+image">
 						<div class="carousel-caption">
 							<h4>认识职业与环境</h4>
 							<div class="des">主讲人：王老师</div>
