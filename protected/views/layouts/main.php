@@ -20,10 +20,10 @@
 	<!-- <link href="<?php echo Yii::app()->
 	request->baseUrl; ?>/assets-frontend/css/bootstrap-responsive.css" rel="stylesheet"> -->
 	<!-- less.css -->
-	<!-- <link rel="stylesheet" href="<?php echo Yii::app()->
-	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.css"> -->
-	<link href="<?php echo Yii::app()->
-	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.less" rel="stylesheet/less" type="text/css">
+	<link rel="stylesheet" href="<?php echo Yii::app()->
+	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.css">
+	<!-- <link href="<?php echo Yii::app()->
+	request->baseUrl; ?>/assets-frontend/less/less_hzb/horizon.less" rel="stylesheet/less" type="text/css"> -->
 	<!-- app.css -->
 	<!-- <link href="<?php echo Yii::app()->
 	request->baseUrl; ?>/assets-frontend/css/app.css" rel="stylesheet"> -->
