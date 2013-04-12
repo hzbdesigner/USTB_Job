@@ -9,8 +9,7 @@
 ?>
  <!-- banner --> 
  <div class="banner" >
-   <img src="http://dummyimage.com/960x240/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image"></div>
- <!-- sub-content --> 
+  <img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/banner/kejian.png" alt="placeholder+image"></div> <!-- sub-content --> 
  <div class="subcontent row">
    <div class="span2 left">
      <ul>
