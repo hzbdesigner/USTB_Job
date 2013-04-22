@@ -37,7 +37,7 @@ EOD;
 		</div>
 	</div> -->
 
-<div class="span12" style="text-align:left;margin-left:0px;">
+<!-- <div class="span12" style="text-align:left;margin-left:0px;">
 	<?php  $this->widget('CLinkPager',array(
 		'pages'=>$pages,
 		'firstPageLabel' => '首页',
@@ -48,7 +48,7 @@ EOD;
 		'footer' => '',
 		)); 
 	?>
-</div>
+</div> -->
 	
 
 </div>

@@ -26,7 +26,7 @@ class DuiwuController extends Controller
 		$criteriaPage = $criteria;
 		$count = Article::model()->count( $criteriaPage);
 		$pages = new CPagination( $count );
-		$pages->pageSize =1;
+		$pages->pageSize =8;
 		$pages->applyLimit( $criteriaPage );
 		$page_num = ceil( $count/$pages->pageSize );
 		//$this->render('index',array('models'=>$models,'catalogs'=>$catalogs,'catalog_id'=>$catalog_id,'column_id'=>$column_id));
