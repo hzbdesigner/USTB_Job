@@ -50,7 +50,7 @@ class Article extends CActiveRecord
 		return array(
 			// array('catalog_id, title, despic, date, author, column_id, content, des, banner', 'required'),
 			array('read_num', 'numerical', 'integerOnly'=>true),
-			array('catalog_id, title, despic, author, column_id, banner', 'length', 'max'=>255),
+			array('catalog_id, title, despic, author, column_id, banner, attachment_video, attachment_doc', 'length', 'max'=>255),
 			array('des', 'length', 'max'=>1024),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -88,6 +88,8 @@ class Article extends CActiveRecord
 			'content' => 'Content',
 			'des' => 'Des',
 			'banner' => 'Banner',
+			'attachment_video'=>'Attachment Video',
+			'attachment_doc'=>'Attachment Doc',
 		);
 	}
 

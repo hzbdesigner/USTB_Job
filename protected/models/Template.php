@@ -46,7 +46,7 @@ class Template extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('tmid', 'required'),
-			array('iftitle, ifdes, ifdespic, ifcontent, ifauthor, ifdate, ifread_num, ifbanner', 'numerical', 'integerOnly'=>true),
+			array('iftitle, ifdes, ifdespic, ifcontent, ifauthor, ifdate, ifread_num, ifbanner, ifattachment_video, ifattachment_doc', 'numerical', 'integerOnly'=>true),
 			array('tmid', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -81,6 +81,8 @@ class Template extends CActiveRecord
 			'ifdate' => 'Ifdate',
 			'ifread_num' => 'Ifread Num',
 			'ifbanner' => 'Ifbanner',
+			'ifattachment_video' => 'Ifattachment Video',
+			'ifattachment_doc' => 'Ifattachment Doc',
 		);
 	}
 
