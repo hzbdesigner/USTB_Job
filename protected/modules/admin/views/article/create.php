@@ -5,6 +5,13 @@
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/assets_admin/tool/ueditor/editor_config.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/assets_admin/tool/ueditor/editor_all_min.js"></script>
 
+<!-- fileupload.js -->
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/assets_admin/tool/jQuery-File-Upload/js/vendor/jquery.ui.widget.js"></script>
+
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/assets_admin/tool/jQuery-File-Upload/js/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/assets_admin/tool/jQuery-File-Upload/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/assets_admin/tool/jQuery-File-Upload/js/jquery.fileupload-process.js"></script>
+
 <div class="tab-pane " id="tab2">
 	<?php
 		if( $error ){

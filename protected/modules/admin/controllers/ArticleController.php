@@ -70,6 +70,8 @@ class ArticleController extends Controller
 		//对于第三种情况有些复杂，妈的暂时不处理了~操~第三种情况的现在的方法是error和msg都无法输出~~
 		if(isset($_POST['Article']))
 		{	
+			$catalog=Catalog::model()->findByPk($catalog_id);
+			$template=$catalog->tm;
 			//文件上传
 			if (!empty($_FILES)){ 
 
@@ -95,29 +97,56 @@ class ArticleController extends Controller
 					//echo '[0]不存在';
 				}
 				// 视频上传
-				$fileTypes_video = array('flv','mp4'); // File extensions
-				
-				if(!empty($_FILES['filedata']['name'][1])){
+				if($template['ifattachment_video']){
+					$fileTypes_video = array('flv','mp4'); // File extensions
+					if(!empty($_FILES['filedata']['name'][1])){
 
-					$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+						$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
 
-					if ( in_array( $ext_video ,$fileTypes_video ) ){   
-						$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
-						$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
-						move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
-						
-						$_POST['Article']['attachment_video'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
+						if ( in_array( $ext_video ,$fileTypes_video ) ){   
+							$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
+							$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
+							move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
+							
+							$_POST['Article']['attachment_video'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
+						}else{
+							$error="视频文件格式不对";
+							//echo $error;
+							$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
+
+						}
 					}else{
-						$error="视频文件格式不对";
-						//echo $error;
-						$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
-
+						$error="信息不完善";
+						$msg="请上传视频文件"; //如果图片名为空的话
+						//echo '[0]不存在';
 					}
-				}else{
-					$error="信息不完善";
-					$msg="请上传视频文件"; //如果图片名为空的话
-					//echo '[0]不存在';
 				}
+				//doc上传
+				if($template['ifattachment_doc']){
+					$fileTypes_doc = array('pdf','ppt','pptx' ,'doc','docx'); // File extensions
+					if(!empty($_FILES['filedata']['name'][1])){
+
+						$ext_doc = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+
+						if ( in_array( $ext_doc ,$fileTypes_doc ) ){   
+							$file_name_doc = 'doc_'.time().rand(0,999).'.'.$ext_doc;
+							$doc_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_doc;//设置存储路径（包括自己的名字）
+							move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $doc_file_path);  //拷贝副本，将副本文件存储到新的位置。
+							
+							$_POST['Article']['attachment_doc'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_doc;
+						}else{
+							$error="视频文件格式不对";
+							//echo $error;
+							$msg = '请上传 正确的 格式的图片';//如果上传的文件格式不对的话
+
+						}
+					}else{
+						$error="信息不完善";
+						$msg="请上传文档文件"; //如果图片名为空的话
+					}
+				}
+				
+
 
 			}else{
 				$error="你没有上传文件";
@@ -181,6 +210,10 @@ class ArticleController extends Controller
 	{
 
 		$model=$this->loadModel($article_id);
+		
+		$catalog=Catalog::model()->findByPk($catalog_id);
+		$template=$catalog->tm;
+		//文件上传
 		if (!empty($_FILES)){ 
 
 			//图片上传
@@ -205,35 +238,61 @@ class ArticleController extends Controller
 				//echo '[0]不存在';
 			}
 			// 视频上传
-			$fileTypes_video = array('flv','mp4'); // File extensions
-			
-			if(!empty($_FILES['filedata']['name'][1])){
+			if($template['ifattachment_video']){
+				$fileTypes_video = array('flv','mp4'); // File extensions
+				if(!empty($_FILES['filedata']['name'][1])){
 
-				$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+					$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
 
-				if ( in_array( $ext_video ,$fileTypes_video ) ){   
-					$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
-					$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
-					move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
-					
-					$_POST['Article']['attachment_video'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
+					if ( in_array( $ext_video ,$fileTypes_video ) ){   
+						$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
+						$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
+						move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
+						
+						$_POST['Article']['attachment_video'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
+					}else{
+						$error="视频文件格式不对";
+						//echo $error;
+						$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
+
+					}
 				}else{
-					$error="视频文件格式不对";
-					//echo $error;
-					$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
-
+					$error="信息不完善";
+					$msg="请上传视频文件"; //如果图片名为空的话
+					//echo '[0]不存在';
 				}
-			}else{
-				$error="信息不完善";
-				$msg="请上传视频文件"; //如果图片名为空的话
-				//echo '[0]不存在';
 			}
+			//doc上传
+			if($template['ifattachment_doc']){
+				$fileTypes_doc = array('pdf','ppt','pptx' ,'doc','docx'); // File extensions
+				if(!empty($_FILES['filedata']['name'][1])){
+
+					$ext_doc = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+
+					if ( in_array( $ext_doc ,$fileTypes_doc ) ){   
+						$file_name_doc = 'doc_'.time().rand(0,999).'.'.$ext_doc;
+						$doc_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_doc;//设置存储路径（包括自己的名字）
+						move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $doc_file_path);  //拷贝副本，将副本文件存储到新的位置。
+						
+						$_POST['Article']['attachment_doc'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_doc;
+					}else{
+						$error="视频文件格式不对";
+						//echo $error;
+						$msg = '请上传 正确的 格式的图片';//如果上传的文件格式不对的话
+
+					}
+				}else{
+					$error="信息不完善";
+					$msg="请上传文档文件"; //如果图片名为空的话
+				}
+			}
+			
+
 
 		}else{
 			$error="你没有上传文件";
 			$msg = '请上传上传文件'; //如果$_file为空的话
 		}
-
 		
 		//catalogs
 		$criteria_ca = new CDbCriteria;
