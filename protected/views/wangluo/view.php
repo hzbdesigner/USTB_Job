@@ -1,6 +1,6 @@
 <div class="video-content">
 	<p class="title"> <?php echo $model->title; ?></p>
-	<a class="video" href="http://pseudo01.hddn.com/vod/demo.flowplayervod/flowplayer-700.flv"   id="player"></a>
+	<a class="video" href='<?php echo $model->attachment_video ; ?>'  id="player"></a>
 </div>
 <div class="video-des">
 	<div class="meta">
