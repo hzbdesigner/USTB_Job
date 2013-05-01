@@ -22,17 +22,15 @@
 				<label class="control-label">栏目</label>
 				<div class="controls">
 				<?php
-					foreach($catalogs as $catalog){
-						$column=$catalog->column;
-						$title=$column->title;
-					}
-					if($column_id=='news'){$title="科技新闻";}
+
+					$column=$catalog->column;
+					$title=$column->title;
 					
-						echo <<<EOD
-						<label class="radio inline">
-							<input type="radio"  name="Article[column_id]" value="$column_id" checked="checked" />
-							<span style="width:90px;">$title</span>
-						</label>
+					echo <<<EOD
+					<label class="radio inline">
+						<input type="radio"  name="Article[column_id]" value="$column_id" checked="checked" />
+						<span style="width:90px;">$title</span>
+					</label>
 EOD;
 					
 					?>
@@ -84,7 +82,32 @@ EOD;
 			<div class="control-group">
 				<label class="control-label">缩略图</label>
 				<div class="controls">
-					<input type="file"  name="despic"/>
+					<input type="file"  name="filedata[]"/>
+					<input type="hidden" name="despic" />
+				</div>
+			</div>
+EOD;
+			} ?>
+			<!-- video -->
+			<?php if($template['ifattachment_video']){
+			echo <<<EOD
+			<div class="control-group">
+				<label class="control-label">视频上传</label>
+				<div class="controls">
+					<input type="file"  name="filedata[]"/>
+					<input type="hidden" name="attachment_video" />
+				</div>
+			</div>
+EOD;
+			} ?>
+			<!-- doc -->
+			<?php if($template['ifattachment_doc']){
+			echo <<<EOD
+			<div class="control-group">
+				<label class="control-label">文档上传</label>
+				<div class="controls">
+					<input type="file"  name="filedata[]"/>
+					<input type="hidden" name="attachment_doc" />
 				</div>
 			</div>
 EOD;

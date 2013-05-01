@@ -63,54 +63,68 @@ class ArticleController extends Controller
 	 */
 	public function actionCreate($column_id,$catalog_id)
 	{
-		$msg = '';
-		$error = '';
+		//create的逻辑我一直没有弄清楚：
+		//情况一：创建，空白的~
+		//情况二：提交按钮，提交后又是教改createUrl来处理了
+		//情况三：提交按钮，但是出现错误，又要重新返回~~尼玛~
+		//对于第三种情况有些复杂，妈的暂时不处理了~操~第三种情况的现在的方法是error和msg都无法输出~~
 		if(isset($_POST['Article']))
 		{	
-			//图片验证
+			//文件上传
 			if (!empty($_FILES)){ 
-				//尼玛，只要有这个控件，就能进来
+
 				//图片上传
-				$fileTypes = array('jpg','jpeg','gif','png'); // File extensions
-				if(!empty($_FILES['despic']['name'])){
-					
-					$ext = pathinfo($_FILES['despic']['name'],PATHINFO_EXTENSION);
-					if ( in_array( $ext ,$fileTypes ) ){   
+				$fileTypes_img = array('jpg','jpeg','gif','png'); // File extensions
+				if(!empty($_FILES['filedata']['name'][0])){
+
+					$ext = pathinfo($_FILES['filedata']['name'][0],PATHINFO_EXTENSION);
+
+					if ( in_array( $ext ,$fileTypes_img ) ){   
 						$file_name = 'despic_'.time().rand(0,999).'.'.$ext;
 						$despic_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name;//设置存储路径（包括自己的名字）
-						move_uploaded_file( $_FILES['despic']['tmp_name'] , $despic_file_path);  //拷贝副本，将副本文件存储到新的位置。
+						move_uploaded_file( $_FILES['filedata']['tmp_name'][0] , $despic_file_path);  //拷贝副本，将副本文件存储到新的位置。
 						
 						$_POST['Article']['despic'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name;
 					}else{
+						$error="图片文件格式不对";
 						$msg = '请上传 png/jpg/gif 格式的图片';//如果上传的文件格式不对的话
 					}
 				}else{
-					$msg="请上传图片1"; //如果图片名为空的话
+					$error="信息不完善";
+					$msg="请上传图片"; //如果图片名为空的话
+					//echo '[0]不存在';
+				}
+				// 视频上传
+				$fileTypes_video = array('flv','mp4'); // File extensions
+				
+				if(!empty($_FILES['filedata']['name'][1])){
+
+					$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+
+					if ( in_array( $ext_video ,$fileTypes_video ) ){   
+						$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
+						$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
+						move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
+						
+						$_POST['Article']['attachment_video'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
+					}else{
+						$error="视频文件格式不对";
+						//echo $error;
+						$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
+
+					}
+				}else{
+					$error="信息不完善";
+					$msg="请上传视频文件"; //如果图片名为空的话
+					//echo '[0]不存在';
 				}
 
-				//视频或者其他文件上传
-				// $fileTypes = array('jpg','jpeg','gif','png'); // File extensions
-				// if(!empty($_FILES['despic']['name'])){
-					
-				// 	$ext = pathinfo($_FILES['despic']['name'],PATHINFO_EXTENSION);
-				// 	if ( in_array( $ext ,$fileTypes ) ){   
-				// 		$file_name = 'despic_'.time().rand(0,999).'.'.$ext;
-				// 		$despic_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name;//设置存储路径（包括自己的名字）
-				// 		move_uploaded_file( $_FILES['despic']['tmp_name'] , $despic_file_path);  //拷贝副本，将副本文件存储到新的位置。
-						
-				// 		$_POST['Article']['despic'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name;
-				// 	}else{
-				// 		$msg = '请上传 png/jpg/gif 格式的图片';//如果上传的文件格式不对的话
-				// 	}
-				// }else{
-				// 	$msg="请上传图片1"; //如果图片名为空的话
-				// }
-
 			}else{
-				$msg = '请上传图片'; //如果$_file为空的话
+				$error="你没有上传文件";
+				$msg = '请上传上传文件'; //如果$_file为空的话
 			}
 
-						
+			//新建一个对象，并赋值，并存储到数据库			
 			$model=new Article;
 			$model->attributes=$_POST['Article'];
 			if ($_POST['Article']['content']) {
@@ -121,16 +135,13 @@ class ArticleController extends Controller
 				$des=$_POST['Article']['des'];
 				$model->des=$des;
 			}
-			
-			
-
 			if($model->save()){
 				$this->redirect(array('/admin/article/admin','column_id'=>$column_id,'catalog_id'=>"all"));
 
 			}else{
 				$msg = '保存失败！'; //如果没有保存到数据库的话
 				$error = '请正确填写文章标题、分类、正文~！';
-
+				$this->render('create',array('error'=>$error,'msg'=>$msg)) ;
 			}
 			
 		}
@@ -151,9 +162,6 @@ class ArticleController extends Controller
 			'error'=>$error,
 			'msg'=>$msg,
 		),true);
-		// $criteria_cl = new CDbCriteria;
-		// $criteria_cl->addCondition("column_id='$column_id'");
-		// $column = Column::model()->findAll($criteria_cl);
 		
 		$this->render('index',array(
 			'sub_content'=>$sub_content,
@@ -171,54 +179,59 @@ class ArticleController extends Controller
 	 */
 	public function actionUpdate($column_id,$article_id,$catalog_id)
 	{
-		$msg = '';
-		$error = '';
+
 		$model=$this->loadModel($article_id);
-		if(isset($_POST['Article']))
-		{	
-			//属性这么多，怎么验证先后啊~~
-			//图片验证
-			if (!empty($_FILES)){ 
-				//尼玛，只要有这个控件，就能进来
-				$fileTypes = array('jpg','jpeg','gif','png'); // File extensions
-				
-				if(!empty($_FILES['despic']['name'])){
+		if (!empty($_FILES)){ 
+
+			//图片上传
+			$fileTypes_img = array('jpg','jpeg','gif','png'); // File extensions
+			if(!empty($_FILES['filedata']['name'][0])){
+
+				$ext = pathinfo($_FILES['filedata']['name'][0],PATHINFO_EXTENSION);
+
+				if ( in_array( $ext ,$fileTypes_img ) ){   
+					$file_name = 'despic_'.time().rand(0,999).'.'.$ext;
+					$despic_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name;//设置存储路径（包括自己的名字）
+					move_uploaded_file( $_FILES['filedata']['tmp_name'][0] , $despic_file_path);  //拷贝副本，将副本文件存储到新的位置。
 					
-					$ext = pathinfo($_FILES['despic']['name'],PATHINFO_EXTENSION);
-					if ( in_array( $ext ,$fileTypes ) ){   
-						$file_name = 'despic_'.time().rand(0,999).'.'.$ext;
-						$despic_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name;//设置存储路径（包括自己的名字）
-						move_uploaded_file( $_FILES['despic']['tmp_name'] , $despic_file_path);  //拷贝副本，将副本文件存储到新的位置。
-						
-						$_POST['Article']['despic'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name;
-					}else{
-						$msg = '请上传 png/jpg/gif 格式的图片';//如果上传的文件格式不对的话
-					}
+					$_POST['Article']['despic'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name;
 				}else{
-					$msg="请上传图片1"; //如果图片名为空的话
+					$error="图片文件格式不对";
+					$msg = '请上传 png/jpg/gif 格式的图片';//如果上传的文件格式不对的话
 				}
 			}else{
-				$msg = '请上传图片'; //如果$_file为空的话
+				$error="信息不完善";
+				$msg="请上传图片"; //如果图片名为空的话
+				//echo '[0]不存在';
 			}
-
-			$model->attributes=$_POST['Article'];
-				if ($_POST['Article']['content']) {
-				$content=$_POST['Article']['content'];
-				$model->content=$content;
-			}
-			if ($des=$_POST['Article']['des']) {
-				$des=$_POST['Article']['des'];
-				$model->des=$des;
-			}
-			if($model->save()){
-				$this->redirect(array('/admin/article/admin','column_id'=>$column_id,'catalog_id'=>"all"));
-				//尼玛，redirect和createUrl不一样
-			}else{
-				$msg = '保存失败！'; //如果没有保存到数据库的话
-				$error = '请正确填写文章标题、分类、正文~！';
-
-			}
+			// 视频上传
+			$fileTypes_video = array('flv','mp4'); // File extensions
 			
+			if(!empty($_FILES['filedata']['name'][1])){
+
+				$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+
+				if ( in_array( $ext_video ,$fileTypes_video ) ){   
+					$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
+					$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
+					move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
+					
+					$_POST['Article']['attachment_video'] = 'http://'.$_SERVER['HTTP_HOST'].Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
+				}else{
+					$error="视频文件格式不对";
+					//echo $error;
+					$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
+
+				}
+			}else{
+				$error="信息不完善";
+				$msg="请上传视频文件"; //如果图片名为空的话
+				//echo '[0]不存在';
+			}
+
+		}else{
+			$error="你没有上传文件";
+			$msg = '请上传上传文件'; //如果$_file为空的话
 		}
 
 		

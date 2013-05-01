@@ -39,6 +39,7 @@
 						<td>$his_catalog_title</td>
 						<td><a href="$url">$article[title]</a></td>
 						<td>$article[des]</td>
+						<td>$article[despic]</td>
 						
 						<td>$date</td>
 						<td>

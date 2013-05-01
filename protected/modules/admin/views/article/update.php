@@ -87,8 +87,38 @@ EOD;
 			<div class="control-group">
 				<label class="control-label">缩略图</label>
 				<div class="controls">
-				<img src="$despic" />
-					<input type="file"  name="despic"/>
+					<img src="$despic" />
+					<input type="file"  name="filedata[]"/>
+					<input type="hidden" name="despic" value='$despic'/>
+				</div>
+			</div>
+EOD;
+			} ?>
+			<!-- video -->
+			<?php if($template['ifattachment_video']){
+				$attachment_video=$model->attachment_video;
+			echo <<<EOD
+			<div class="control-group">
+			<span>视频链接: $attachment_video </span>
+				<label class="control-label">视频上传</label>
+				<div class="controls">
+					
+					<input type="file"  name="filedata[]"/>
+					<input type="hidden" name="attachment_video" value='$attachment_video'/>
+				</div>
+			</div>
+EOD;
+			} ?>
+			<!-- doc -->
+			<?php if($template['ifattachment_doc']){
+				$attachment_doc=$model->attachment_doc;
+			echo <<<EOD
+			<div class="control-group">
+			<span>文档链接: $attachment_doc </span>
+				<label class="control-label">文档上传</label>
+				<div class="controls">
+					<input type="file"  name="filedata[]"/>
+					<input type="hidden" name="attachment_doc" value="$attachment_doc" />
 				</div>
 			</div>
 EOD;
@@ -106,7 +136,9 @@ EOD;
 			</div>
 EOD;
 
-			} ?>			
+			} ?>	
+
+
 			<!-- author -->
 			<?php if($template['ifauthor']){
 				$author=$model->author;
