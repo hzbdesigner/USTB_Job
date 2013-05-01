@@ -149,8 +149,8 @@ class ArticleController extends Controller
 
 
 			}else{
-				$error="你没有上传文件";
-				$msg = '请上传上传文件'; //如果$_file为空的话
+				$error="";
+				$msg = ''; //如果$_file为空的话
 			}
 
 			//新建一个对象，并赋值，并存储到数据库			
@@ -210,7 +210,7 @@ class ArticleController extends Controller
 	{
 
 		$model=$this->loadModel($article_id);
-		
+
 		$catalog=Catalog::model()->findByPk($catalog_id);
 		$template=$catalog->tm;
 		//文件上传
@@ -232,10 +232,6 @@ class ArticleController extends Controller
 					$error="图片文件格式不对";
 					$msg = '请上传 png/jpg/gif 格式的图片';//如果上传的文件格式不对的话
 				}
-			}else{
-				$error="信息不完善";
-				$msg="请上传图片"; //如果图片名为空的话
-				//echo '[0]不存在';
 			}
 			// 视频上传
 			if($template['ifattachment_video']){
@@ -256,10 +252,6 @@ class ArticleController extends Controller
 						$msg = '请上传 flv/mp4 格式的图片';//如果上传的文件格式不对的话
 
 					}
-				}else{
-					$error="信息不完善";
-					$msg="请上传视频文件"; //如果图片名为空的话
-					//echo '[0]不存在';
 				}
 			}
 			//doc上传
@@ -281,17 +273,29 @@ class ArticleController extends Controller
 						$msg = '请上传 正确的 格式的图片';//如果上传的文件格式不对的话
 
 					}
-				}else{
-					$error="信息不完善";
-					$msg="请上传文档文件"; //如果图片名为空的话
 				}
+			}
+
+			$model->attributes=$_POST['Article'];
+			if ($_POST['Article']['content']) {
+				$content=$_POST['Article']['content'];
+				$model->content=$content;
+			}
+			if ($des=$_POST['Article']['des']) {
+				$des=$_POST['Article']['des'];
+				$model->des=$des;
+			}
+			if($model->save()){
+				$this->redirect(array('/admin/article/admin','column_id'=>$column_id,'catalog_id'=>"all"));
+
+			}else{
+				$msg = '保存失败！'; //如果没有保存到数据库的话
+				$error = '请正确填写文章标题、分类、正文~！';
+				$this->render('create',array('error'=>$error,'msg'=>$msg)) ;
 			}
 			
 
 
-		}else{
-			$error="你没有上传文件";
-			$msg = '请上传上传文件'; //如果$_file为空的话
 		}
 		
 		//catalogs
