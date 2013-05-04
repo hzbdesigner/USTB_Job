@@ -50,7 +50,7 @@ EOD;
           <span class="divider">/</span>
         </li>
 EOD;
-    if ($this->action->id==view) {
+    if ($this->action->id=='view') {
        echo '<li class="active">内容</li>';
       } else {
        echo '';
