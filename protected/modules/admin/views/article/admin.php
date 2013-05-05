@@ -16,7 +16,6 @@
 			<tr>
 				<td>分类</td>
 				<td>标题</td>
-				<td>des</td>
 				<td>发布时间</td>
 				<td>管理</td>
 				
@@ -38,8 +37,6 @@
 					<tr>
 						<td>$his_catalog_title</td>
 						<td><a href="$url">$article[title]</a></td>
-						<td>$article[des]</td>
-						<td>$article[despic]</td>
 						
 						<td>$date</td>
 						<td>
