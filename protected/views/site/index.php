@@ -92,8 +92,9 @@ EOD;
 						$despic=$model->despic;
 						$des=$model->des;
 						$article_id=$model->article_id;
+						$catalog_id_this=$model->catalog_id;
 
-						$url=$this->createUrl('/jiaocai/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
+						$url=$this->createUrl('/kejian/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id_this, 'article_id'=>$article_id));
 						echo <<<EOD
 						<div class="span3">
 							<div class="thumbnail">
