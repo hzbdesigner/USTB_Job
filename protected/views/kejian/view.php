@@ -13,7 +13,7 @@
 				<p>您是否要下载该课件？</p>
 			</div>
 			<div class="modal-footer">
-				<a href="<?php echo $model->attachment_doc; ?>" class="btn btn-primary">下载</a>
+				<a href="<?php echo $model->attachment_doc; ?>" class="btn btn-primary">下载（右键--目标另存为）</a>
 				<a href="#" class="btn" data-dismiss="modal">取消</a>
 			</div>
 		</div>
