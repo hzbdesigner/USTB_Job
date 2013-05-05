@@ -98,10 +98,12 @@ class ArticleController extends Controller
 				}
 				// 视频上传
 				if($template['ifattachment_video']){
-					$fileTypes_video = array('flv','mp4'); // File extensions
+					$fileTypes_video = array('flv','swf'); // File extensions
 					if(!empty($_FILES['filedata']['name'][1])){
 
 						$ext_video = pathinfo($_FILES['filedata']['name'][1],PATHINFO_EXTENSION);
+						//fix for issue: 200, Stream not found, NetStream.Play.StreamNotFound, clip:
+						if($ext_video=='flv'){$ext_video='swf';}
 
 						if ( in_array( $ext_video ,$fileTypes_video ) ){   
 							$file_name_video = 'video_'.time().rand(0,999).'.'.$ext_video;
