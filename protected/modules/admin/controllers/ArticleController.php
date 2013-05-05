@@ -110,7 +110,7 @@ class ArticleController extends Controller
 							$video_file_path =  Yii::app()->basePath.'/../assets_admin/upload/'.$file_name_video;//设置存储路径（包括自己的名字）
 							move_uploaded_file( $_FILES['filedata']['tmp_name'][1] , $video_file_path);  //拷贝副本，将副本文件存储到新的位置。
 							//$hostname=$_SERVER['HTTP_HOST'];
-							$hostname=202.204.61.241:8080;
+							$hostname="202.204.61.241:8080";
 							$_POST['Article']['attachment_video'] = 'http://'.$hostname.Yii::app()->baseUrl.'/assets_admin/upload/'.$file_name_video;
 						}else{
 							$error="视频文件格式不对";
