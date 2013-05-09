@@ -109,34 +109,7 @@ EOD;
 EOD;
 					}
 				?>
-					<div class="span3">
-						<div class="thumbnail">
-							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							<div class="title">教材标题</div>
-							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
-						</div>
-					</div>
-					<div class="span3">
-						<div class="thumbnail">
-							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							<div class="title">教材标题</div>
-							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
-						</div>
-					</div>
-					<div class="span3">
-						<div class="thumbnail">
-							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							<div class="title">教材标题</div>
-							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
-						</div>
-					</div>
-					<div class="span3">
-						<div class="thumbnail">
-							<img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							<div class="title">教材标题</div>
-							<p class="des">教材简介教材简介教材简介教材简介教材简介教材简介教材简介</p>
-						</div>
-					</div>
+					
 
 				</div>
 
@@ -179,58 +152,7 @@ EOD;
 }
 
 				?>
-					<div class="span6">
-						<div class="row-fluid">
-							<div class="thumbnail span5 ">
-							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
-							</div>
-							<div class="span7 content">
-								<div class="title"><a href="#">视频标题视频标题</a></div>
-								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
-								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
-							</div>
-						</div>
-					</div>
-					<div class="span6">
-						<div class="row-fluid">
-							<div class="thumbnail span5 ">
-							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
-							</div>
-							<div class="span7 content">
-								<div class="title"><a href="#">视频标题视频标题</a></div>
-								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
-								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
-							</div>
-						</div>
-					</div>
-					<div class="span6">
-						<div class="row-fluid">
-							<div class="thumbnail span5 ">
-							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
-							</div>
-							<div class="span7 content">
-								<div class="title"><a href="#">视频标题视频标题</a></div>
-								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
-								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
-							</div>
-						</div>
-					</div>
-					<div class="span6">
-						<div class="row-fluid">
-							<div class="thumbnail span5 ">
-							 <img src="http://dummyimage.com/800x600/ddd/686a82.gif&text=placeholder+image" alt="placeholder+image">
-							 <i class=""><img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/icon-video.png"></i>
-							</div>
-							<div class="span7 content">
-								<div class="title"><a href="#">视频标题视频标题</a></div>
-								<p class="meta"><span> <i class=" icon-film"></i> 浏览:5</span><span> <i class="icon-user"></i> 作者:admin</span></p>
-								<p class="destext">视频简介，描述视频简介，描述视频简介，描述视频简介，描述</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 				<div class="tab-content-job" id="tab3">
 					<table class="table table-striped ziliaolists">
@@ -243,42 +165,35 @@ EOD;
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>团委</td>
-								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
-								<td>2013-04-01</td>
-								<td>下载（10）</td>
-							</tr>
-							<tr>
-								<td>团委</td>
-								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
-								<td>2013-04-01</td>
-								<td>下载（10）</td>
-							</tr>
-							<tr>
-								<td>团委</td>
-								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
-								<td>2013-04-01</td>
-								<td>下载（10）</td>
-							</tr>
-							<tr>
-								<td>团委</td>
-								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
-								<td>2013-04-01</td>
-								<td>下载（10）</td>
-							</tr>
-							<tr>
-								<td>团委</td>
-								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
-								<td>2013-04-01</td>
-								<td>下载（10）</td>
-							</tr>
-							<tr>
-								<td>团委</td>
-								<td><a href="#">其他资料名称其他资料名称其他资料名称</a></td>
-								<td>2013-04-01</td>
-								<td>下载（10）</td>
-							</tr>
+
+								<?php
+							
+								$criteria= new CDbCriteria;
+								$criteria->limit=6;
+								$criteria->order="article_id DESC";
+								$column_id='ziliao';
+								$criteria->addCondition("column_id='$column_id'");
+								$models=Article::Model()->findAll($criteria); 
+
+								foreach ($models as $model) {
+									$title=$model->title;
+									$author=$model->author;
+									$article_id=$model->article_id;
+									$read_num=$model->read_num;
+									$date=substr($model->date, 0, 10);
+									$url=$this->createUrl('/ziliao/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
+									echo <<<EOD
+									<tr>
+										<td>$author</td>
+										<td><a href="$url">$title</a></td>
+										<td>$date</td>
+										<td>下载（<span>$read_num</span>）</td>
+									</tr>
+
+EOD;
+			}
+
+							?>
 
 						</tbody>
 					</table>

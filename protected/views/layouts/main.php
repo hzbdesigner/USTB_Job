@@ -124,7 +124,7 @@
 				</li>
 				<li class="nav_divider"></li>
 				<li>
-					<a href="<?php echo $this->createUrl('/ziliao/index', array('column_id'=>'ziliao','catalog_id'=>'shipin')); ?>" class="<?php if ($this->id=='ziliao') {echo 'active';} ?>">
+					<a href="<?php echo $this->createUrl('/ziliao/index', array('column_id'=>'ziliao','catalog_id'=>'qita')); ?>" class="<?php if ($this->id=='ziliao') {echo 'active';} ?>">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/nav_download.png" />
 					</a>
 				</li>
