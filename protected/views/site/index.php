@@ -37,16 +37,6 @@
 EOD;
 						}
 					?>
-					<div class=" active item">
-						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide1.png" alt="placeholder+image">
-						<div class="carousel-caption">
-							<h4>认识职业与环境</h4>
-							<div class="des">主讲人：王老师</div>
-							<p>
-							认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境							
-							</p>
-						</div>
-					</div>
 					<div class="item">
 						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide2.png" alt="placeholder+image">
 						<div class="carousel-caption">
