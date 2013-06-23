@@ -45,16 +45,16 @@
 				<span class="span5 mt10">
 					<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets-frontend/img/logo_title.png">
 					<div class="link mt10">
-						<a href="#">学校首页</a>
+						<a href="http://www.ustb.edu.cn">学校首页</a>
 						&nbsp;|&nbsp;
-						<a href="#">就业信息网</a>
+						<a href="http://job.ustb.edu.cn">就业信息网</a>
 					</div>
 				</span>
 			</div>
 			<div class="span3 link mt25 ml45">
-				<a href="#">登录</a>
+				<a href="http://job.ustb.edu.cn/accms/sites/jobc/login.jsp">登录</a>
 				&nbsp;|&nbsp;
-				<a href="#">加入收藏</a>
+				<a href="#">收藏本站</a>
 			</div>
 		</div>
 	</div>
@@ -131,33 +131,35 @@
 		<div class="friendlink">
 			<ul>
 				<li>
-					<a href="#">北京科技大学</a>
+					<a href="www.ustb.edu.cn">北京科技大学</a>
 				</li>
 				<li>
-					<a href="#">本科教学网</a>
+					<a href="http://teach.ustb.edu.cn">本科教学网</a>
 				</li>
 				<li>
-					<a href="#">北京科技大学</a>
+					<a href="http://job.ustb.edu.cn">就业信息网</a>
 				</li>
 				<li>
-					<a href="#">招生就业处</a>
+					<a href="http://www.ustb.edu.cn/rcpy/index.asp">招生就业网</a>
 				</li>
 				<li>
-					<a href="#">本科教学网</a>
+					<a href="http://zhaosheng.ustb.edu.cn/zs/index.do">本科生招生网</a>
 				</li>
 				<li>
-					<a href="#">北京科技大学</a>
+					<a href="http://lib.ustb.edu.cn">图书馆</a>
+				</li>
+				
+				<li>
+					<a href="http://job.ustb.edu.cn/accms/sites/jobc/zpxxmk.jsp">校园招聘</a>
 				</li>
 				<li>
-					<a href="#">招生就业处</a>
+					<a href="http://job.ustb.edu.cn/accms/sites/jobc/zyzd.jsp">职业辅导</a>
 				</li>
-				<li>
-					<a href="#">北京科技大学</a>
-				</li>
+
 			</ul>
 		</div>
 		<div class="copyright">
-			<p>北京科技大学就业信息网 
+			<p>北京科技大学职业发展与就业指导网
 			<p>
 地址：中国.北京海淀区学院路30号 100083    邮箱：jyzx@ustb.edu.cn      
 			</p>
