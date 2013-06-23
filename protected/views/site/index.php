@@ -58,17 +58,17 @@ EOD;
 			<div class="span10 left">
 				<ul class="nav-job row-fluid">
 					<li class="active span4">
-						<a data-toggle="tab" data-target="#tab1">最新课件</a>
+						<a data-toggle="tab" >最新课件</a>
 					</li>
-					<li class="span4">
-						<a data-toggle="tab" data-target="#tab2">最新视频</a>
+					<li class="active span4">
+						<a data-toggle="tab" >最新视频</a>
 					</li>
-					<li class="span4">
-						<a data-toggle="tab" data-target="#tab3">最新下载</a>
+					<li class="active span4">
+						<a data-toggle="tab" >最新下载</a>
 					</li>
 				</ul>
 				
-				<div class="tab-content-job row-fluid jiaocailists active" id="tab1">
+				<div class="tab-content-job row-fluid jiaocailists active span4" id="tab1">
 					<?php
 				
 					$criteria= new CDbCriteria;
@@ -86,11 +86,11 @@ EOD;
 
 						$url=$this->createUrl('/kejian/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id_this, 'article_id'=>$article_id));
 						echo <<<EOD
-						<div class="span3">
-							<div class="thumbnail">
-								<img src="$despic" alt="placeholder+image">
-								<div class="title"><a href="$url">$title</a></div>
-								<p class="des">$des</p>
+						<div class="span12">
+							<div class="thumbnail" style="text-align:center;padding-bottom:0px;margin-bottom:8px;">
+								<img src="$despic" alt="placeholder+image" style="height:100px;width:200px;">
+								<div class="title" style="margin-bottom:0px;"><a href="$url">$title</a></div>
+								<p class="des" style="">$des</p>
 								
 							</div>
 						</div>
@@ -103,7 +103,7 @@ EOD;
 
 				</div>
 
-				<div class="tab-content-job row-fluid wangluolists" id="tab2">
+				<div class="tab-content-job row-fluid wangluolists active span4" id="tab2">
 					<?php
 				
 					$criteria= new CDbCriteria;
@@ -123,17 +123,16 @@ EOD;
 						$url=$this->createUrl('/wangluo/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
 						$videoicon=Yii::app()->request->baseUrl.'/assets-frontend/img/icon-video.png';
 						echo <<<EOD
-						<div class="span6">
+						<div class="span12">
 
 							<div class="row-fluid">
-								<div class="thumbnail span5 ">
+								<div class="thumbnail span12 ">
 								 <img src="$despic" alt="$title">
 								 <i class=""><img src='$videoicon'></i>
 								</div>
-								<div class="span7 content">
+								<div class="span12 content">
 									<div class="title"><a href="$url">$title</a></div>
-									<p class="meta"><span> <i class=" icon-eye-open"></i> 浏览:<b>$read_num</b></span><span> <i class="icon-time"></i>时间:<b>$date</b> </span></p>
-									<p class="destext">$des</p>
+									<p class="meta"><span> <i class=" icon-eye-open"></i> 点击:<b>$read_num</b></span><span> <i class="icon-time"></i>时间:<b>$date</b> </span></p>
 								</div>
 							</div>
 						</div>
@@ -144,14 +143,12 @@ EOD;
 				?>
 					
 				</div>
-				<div class="tab-content-job" id="tab3">
+				<div class="tab-content-job active span4 ziliaolist" id="tab3">
 					<table class="table table-striped ziliaolists">
 						<thead>
 							<tr>
-								<th>发布者</th>
-								<th>资料名称</th>
-								<th>发布时间</th>
-								<th>下载次数</th>
+								<td style="width:180px;">资料名称</td>
+								<td style="width:37px;">下载</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -174,10 +171,9 @@ EOD;
 									$url=$this->createUrl('/ziliao/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
 									echo <<<EOD
 									<tr>
-										<td>$author</td>
-										<td><a href="$url">$title</a></td>
-										<td>$date</td>
-										<td>下载（<span>$read_num</span>）</td>
+										<td style="width:180px;"><a href="$url">$title</a></td>
+										
+										<td style="width:36px;text-align:center;"><span>$read_num</span></td>
 									</tr>
 
 EOD;

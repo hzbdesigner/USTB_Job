@@ -722,9 +722,12 @@ html,body{background-color:#fff;height:100%;width:100%;position:relative;z-index
 .page-content .content .left .nav-job li a{height:50px;display:block;text-align:center;line-height:50px;font-size:16px;width:100%;}
 .page-content .content .left .nav-job li:hover{background-color:#eee;border-top:4px solid #144fa5;color:#c5433d;}
 .page-content .content .left .nav-job li.active{background-color:#eee;border-top:4px solid #144fa5;color:#c5433d;}
+.page-content .content .left .tab-content-job{padding-left: 10px; padding-right: 10px;margin-top: 0;border: 1px solid #dedede;padding-top: 10px;}
 .page-content .content .left .tab-content-job{display:none;}.page-content .content .left .tab-content-job.active{display:block;}
+.page-content .content .left .tab-content-job.jiaocailists{margin-left: 0px;}
 .page-content .content .left .tab-content-job li{float:left;margin-right:15px !important;margin-bottom:10px;}.page-content .content .left .tab-content-job li img{width:100%;}
 .page-content .content .left .tab-content-job li p{font-size:14px;text-align:center;margin-top:5px;height:24px;width:100%;overflow:hidden;}
+.page-content .content .left .ziliaolist{margin-left: 12px;}
 .page-content .content .left .jiaocailists .span3{margin-bottom:15px;text-align:center;}
 .page-content .content .left .jiaocailists img{width:atuo;height:120px;}
 .page-content .content .left .jiaocailists .title{font-size:14px;color:#144fa5;margin-top:5px;margin-bottom:5px;width:100%;overflow:hidden;}
@@ -732,7 +735,7 @@ html,body{background-color:#fff;height:100%;width:100%;position:relative;z-index
 .page-content .content .left .jiaocailists .btn{margin-bottom:10px;font-size:12px;color:#c5433d;}
 .page-content .content .left .ziliaolists tbody td{color:#999;font-size:12px;}
 .page-content .content .left .ziliaolists tbody a{color:#144fa5;font-size:14px;}.page-content .content .left .ziliaolists tbody a:hover{color:#c5433d;}
-.page-content .content .left .wangluolists{margin-top:15px;}.page-content .content .left .wangluolists>div{margin-bottom:15px;}
+.page-content .content .left .wangluolists>div{margin-bottom:15px;}
 .page-content .content .left .wangluolists .thumbnail{position:relative;}.page-content .content .left .wangluolists .thumbnail img{width:100%;height:100px;}
 .page-content .content .left .wangluolists .thumbnail i{position:absolute;right:4px;bottom:4px;width:32px;height:30px;line-height:30px;background-color:rgba(0, 0, 0, 0.5);text-align:center;}.page-content .content .left .wangluolists .thumbnail i img{width:30px;height:25px;}
 .page-content .content .left .wangluolists .content .title{font-size:16px;color:#444;line-height:24px;border-bottom:1px dotted #ddd;margin-top:-10px;}.page-content .content .left .wangluolists .content .title a{display:block;line-height:24px;color:#144fa5;}
