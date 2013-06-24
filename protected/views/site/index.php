@@ -58,13 +58,13 @@ EOD;
 			<div class="span10 left">
 				<ul class="nav-job row-fluid">
 					<li class="active span4">
-						<a data-toggle="tab" >最新课件</a>
+						<a class="heiti"  href="<?php echo $this->createUrl('/kejian/index', array('column_id'=>'kejian','catalog_id'=>'jiaoxue')); ?>" >最新课件</a>
 					</li>
 					<li class="active span4">
-						<a data-toggle="tab" >最新视频</a>
+						<a class="heiti"  href="<?php echo $this->createUrl('/wangluo/index', array('column_id'=>'wangluo','catalog_id'=>'xiaoyuan')); ?>">最新视频</a>
 					</li>
 					<li class="active span4">
-						<a data-toggle="tab" >最新下载</a>
+						<a class="heiti"  href="<?php echo $this->createUrl('/ziliao/index', array('column_id'=>'ziliao','catalog_id'=>'qita')); ?>">最新下载</a>
 					</li>
 				</ul>
 				
@@ -147,8 +147,8 @@ EOD;
 					<table class="table table-striped ziliaolists">
 						<thead>
 							<tr>
-								<td style="width:180px;">资料名称</td>
-								<td style="width:37px;">下载</td>
+								<td style="width:180px;font-size: 12px;color:#999; ">资料名称</td>
+								<td style="width:30px;font-size: 12px;color:#999;padding-left:0px;padding-right:0px;">下载</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -171,7 +171,7 @@ EOD;
 									$url=$this->createUrl('/ziliao/view',array( 'column_id'=>$column_id,'catalog_id'=>$catalog_id, 'article_id'=>$article_id));
 									echo <<<EOD
 									<tr>
-										<td style="width:180px;"><a href="$url">$title</a></td>
+										<td ><a href="$url" style="display:block;overflow:hidden; width:170px;white-space:nowrap; text-overflow:ellipsis;">$title</a></td>
 										
 										<td style="width:36px;text-align:center;"><span>$read_num</span></td>
 									</tr>
@@ -186,7 +186,7 @@ EOD;
 				</div>
 			</div>
 			<div class="span2 right">
-				<div class="title">师资队伍</div>
+				<div class="title heiti">师资队伍</div>
 				<div class="row-fluid duiwulists">
 					<?php 
 					$criteria= new CDbCriteria;

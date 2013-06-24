@@ -778,3 +778,7 @@ html,body{background-color:#fff;height:100%;width:100%;position:relative;z-index
 .friendlink ul:after{clear:both;}
 .friendlink li{float:left;margin-left:20px;padding-left:10px;padding-right:10px;line-height:42px;width:76px;}.friendlink li a{font-size:12px;}
 .copyright{padding-bottom:10px;}.copyright p{text-align:center;font-size:12px;color:#999;}
+.heiti{font-family: "SimHei"; font-weight: bold;}
+.subcontent .span2.left li a{ font-family: "SimHei"; font-weight: bold;}
+.subtitle a{ font-family: "SimHei"; font-weight: bold;}
+.breadcrumb li a{font-family: "SimHei"; font-weight: bold;}
