@@ -88,7 +88,7 @@ EOD;
 						echo <<<EOD
 						<div class="span12">
 							<div class="thumbnail" style="text-align:center;padding-bottom:0px;margin-bottom:8px;">
-								<img src="$despic" alt="placeholder+image" style="height:100px;width:200px;">
+								<img src="$despic" alt="placeholder+image" style="height:100px;">
 								<div class="title" style="margin-bottom:0px;"><a href="$url">$title</a></div>
 								<p class="des" style="">$des</p>
 								
@@ -127,7 +127,7 @@ EOD;
 
 							<div class="row-fluid">
 								<div class="thumbnail span12 ">
-								 <img src="$despic" alt="$title">
+								 <img src="$despic" style="height:100px; max-width:200px;" alt="$title">
 								 <i class=""><img src='$videoicon'></i>
 								</div>
 								<div class="span12 content">
