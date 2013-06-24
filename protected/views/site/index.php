@@ -72,7 +72,7 @@ EOD;
 					<?php
 				
 					$criteria= new CDbCriteria;
-					$criteria->limit=8;
+					$criteria->limit=2;
 					$criteria->order="article_id DESC";
 					$column_id='kejian';
 					$criteria->addCondition("column_id='$column_id'");
@@ -107,7 +107,7 @@ EOD;
 					<?php
 				
 					$criteria= new CDbCriteria;
-					$criteria->limit=6;
+					$criteria->limit=2;
 					$criteria->order="article_id DESC";
 					$column_id='wangluo';
 					$criteria->addCondition("column_id='$column_id'");
