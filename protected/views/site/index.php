@@ -38,10 +38,10 @@ EOD;
 						}
 					?>
 					<div class="item active">
-						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide2.png" alt="placeholder+image">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/upload/slide/slide0.jpg" alt="placeholder+image">
 						<div class="carousel-caption">
-							<h4>就业指导与信息</h4>
-							<div class="des">主讲人：王老师</div>
+							<h4>大学生就业指导与信息网</h4>
+							<div class="des">北京科技大学学生就业指导中心 </div>
 							<p>
 							认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境认识职业与环境							
 							</p>
